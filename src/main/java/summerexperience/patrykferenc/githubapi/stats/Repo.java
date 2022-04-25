@@ -7,10 +7,6 @@ public class Repo {
     private final String name;
     private Map<String, Long> languageStats;
 
-    public Repo(String name) {
-        this.name = name;
-    }
-
     public Repo(String name, Map<String, Long> languageStats) {
         this.name = name;
         this.languageStats = languageStats;

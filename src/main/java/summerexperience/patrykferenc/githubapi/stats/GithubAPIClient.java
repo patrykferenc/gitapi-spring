@@ -27,7 +27,7 @@ public class GithubAPIClient {
     public Mono<User> getUser(String username) {
         return this.client
                 .get()
-                .uri(GITHUB_API_USER_LINK + "/" + username)
+                .uri(String.format("%s/%s", GITHUB_API_USER_LINK, username))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(User.class);
@@ -36,7 +36,7 @@ public class GithubAPIClient {
     public Flux<Repo> getRepos(String username) {
         return this.client
                 .get()
-                .uri(GITHUB_API_USER_LINK + "/" + username + "/repos")
+                .uri(String.format("%s/%s/repos", GITHUB_API_USER_LINK, username))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(Repo.class);
@@ -45,7 +45,7 @@ public class GithubAPIClient {
     public Flux<Map<String, Long>> getLanguages(String username, String repository) {
         return this.client
                 .get()
-                .uri(GITHUB_API_REPO_LINK + "/" + username + "/" + repository + "/languages")
+                .uri(String.format("%s/%s/%s/languages", GITHUB_API_REPO_LINK, username, repository))
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux(MAP_TYPE_REF);
