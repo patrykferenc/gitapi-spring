@@ -3,7 +3,7 @@
 
 Assignment 3 - Software Engineer
 
-My email in recruitment process: <patrykferenc@protonmail.com>
+My email in recruitment process: ###
 
 English below.
 
