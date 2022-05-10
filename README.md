@@ -1,9 +1,7 @@
 
-# Allegro Summer Experience 2022
+# Github REST API
 
-Assignment 3 - Software Engineer
-
-My email in recruitment process: ###
+Just a simple RESTful API that fetches language statistics of a given github user, written in Java (Spring).
 
 English below.
 
